@@ -23,3 +23,8 @@ jstack PID > thread.tdump
 ```
 jmap -dump:live,format=b,file=heapDump.hprof PID
 ```
+## 从容器中拷贝出文件
+```
+sudo docker cp CONTAINER_NAME:threadDump.tdump .
+sudo docker cp CONTAINER_NAME:heapDump.hprof .
+```
