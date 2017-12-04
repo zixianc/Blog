@@ -1,5 +1,5 @@
 ---
-title: docker-install
+title: centos7安装docker
 date: 2017-11-22 20:39:10
 categories:
 - Docker
@@ -21,6 +21,7 @@ tee /etc/docker/daemon.json <<-'EOF'
 }
 EOF
 ```
+<!-- more -->
 ## 修改允许非安全的仓库
 ``` 
 vi /usr/lib/systemd/system/docker.service
