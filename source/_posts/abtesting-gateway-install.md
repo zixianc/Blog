@@ -1,5 +1,5 @@
 ---
-title: 动态策略灰度发布系统（ABTestingGateway部署和使用）
+title: 动态策略灰度发布系统（ABTestingGateway）
 date: 2018-02-11 12:11:44
 categories:
 - Nginx

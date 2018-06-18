@@ -10,8 +10,7 @@ Java运行的是这样的，首先Java编译器将我们的源代码编译成为
 
 ## 类加载过程
 一个java文件被加载到内存中需要经历三个阶段 `加载-连接（验证+准备+解析）->初始化`
-![java-classload](http://p0kzweqn4.bkt.clouddn.com/java-classload.png)
-<!-- more -->
+
 * 加载  
 查找并加载类的二进制数据
 * 连接  
@@ -20,6 +19,9 @@ Java运行的是这样的，首先Java编译器将我们的源代码编译成为
 解析：把类中的符号引用转换为直接引用
 * 初始化  
 为类的静态变量赋予正确的初始值（自主赋予的值）
+<!-- more -->
+<img src="http://p0kzweqn4.bkt.clouddn.com/javaclassload.png" style="float: left;"></img>
+<div style="clear: both;"></div>
 
 ## 类的初始化
 Java程序对类的使用方式可分为2种，主动使用和被动使用。所有的Java虚拟机实现必须在每个类或接口被Java程序**首次主动使用时才初始化他们**
@@ -49,8 +51,8 @@ System.getProperty("sun.boot.class.path")所指定的路径或jar。
 负责加载classpath中指定的jar包及目录中class 
 4. CustomClassLoader（自定义加载器）  
 属于应用程序根据自身需要自定义的ClassLoader，如tomcat、jboss都会根据j2ee规范自行实现。
-
-![类加载器](http://p0kzweqn4.bkt.clouddn.com/classloader.png)
+<img src="http://p0kzweqn4.bkt.clouddn.com/classloader.png" style="float: left;"></img>
+<div style="clear: both;"></div>
 
 ### 类加载器的顺序 
 1. 加载过程中会先检查类是否被已加载，检查顺序是自底向上，从Custom ClassLoader到BootStrap ClassLoader逐层检查，只要某个classloader已加载就视为已加载此类，保证此类只所有ClassLoader加载一次。而加载的顺序是自顶向下，也就是由上层来逐层尝试加载此类。 
